@@ -1,4 +1,4 @@
-/* 旋转地球去下班 — page, results and challenge sharing. */
+/* 别让地球掉下班 — page, results and challenge sharing. */
 (() => {
   'use strict';
 
@@ -275,7 +275,7 @@
 
   function shareText() {
     const score = result ? result.score : best.score;
-    return `我转着地球赶下班，拿下 ${score} 分！\n《旋转地球去下班》人自己跳，你负责转动整个星球。\n同一条下班路，你能超过我吗？点开就能玩。`;
+    return `我转着地球赶下班，拿下 ${score} 分！\n《别让地球掉下班》人自己跳，你负责转动整个星球。\n同一条下班路，你能超过我吗？点开就能玩。`;
   }
 
   function exposeUrl(focus = false) {
@@ -307,7 +307,7 @@
     exposeUrl();
     if (typeof navigator.share === 'function') {
       try {
-        await navigator.share({ title: '旋转地球去下班 · 来接招', text: shareText(), url });
+        await navigator.share({ title: '别让地球掉下班 · 来接招', text: shareText(), url });
         return;
       } catch (error) {
         if (error && error.name === 'AbortError') return;
